@@ -17,7 +17,8 @@ alert_loop = {
     open_violation_on_expiration   = true
     close_violations_on_expiration = true
     slide_by                       = 30
-    nrql                           = "SELECT average(duration) FROM Transaction where appName = 'Your App'"
+    # nrql                           = "SELECT average(duration) FROM Transaction where appName = 'Your App'"
+    nrql = " FROM SystemSample SELECT average(cpuPercent)"
     critical = {
       operator              = "above"
       threshold             = 5.5
@@ -49,7 +50,7 @@ alert_loop = {
     open_violation_on_expiration   = true
     close_violations_on_expiration = true
     slide_by                       = 30
-    nrql                           = "SELECT average(duration) FROM Transaction where appName = 'Your App'"
+    nrql = " FROM SystemSample SELECT average(memoryUsedPercent)"
     critical = {
       operator              = "above"
       threshold             = 5.5

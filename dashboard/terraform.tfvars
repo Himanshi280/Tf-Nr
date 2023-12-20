@@ -12,6 +12,7 @@ dashboard = {
         height = 3
         nrql_query = {
           query = "FROM Transaction SELECT rate(count(*), 1 minute)"
+        # query = " FROM SystemSample SELECT average(cpuPercent)"
         }
       }
       widget_bar = {
